@@ -28,7 +28,7 @@
                 let tg = window.Telegram.WebApp;
                 tg.ready();
                 tg.expand();
-
+                
                 // Отправляем данные в Telegram
                 tg.sendData(JSON.stringify({
                     action: "open",
@@ -39,7 +39,7 @@
                 window.location.href = "https://t.me/NewTest0932";
             }
         }
-
+        
         // Проверяем, открыто ли в Telegram
         if (window.Telegram && window.Telegram.WebApp) {
             let tg = window.Telegram.WebApp;
