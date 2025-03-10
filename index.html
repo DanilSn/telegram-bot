@@ -15,19 +15,41 @@
         }
 
         .header {
-            background-image: url('http://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk.avif');
-            background-size: cover;
-            background-position: center;
+            position: relative;
             padding: 40px 20px;
             text-align: center;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: blur(0px);
+            z-index: -1;
         }
 
         .header h1 {
             margin: 0;
             font-size: 24px;
             line-height: 1.3;
+            position: relative;
+            z-index: 1;
         }
 
         .section {
@@ -93,6 +115,9 @@
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
 
         .join-button:hover {
@@ -111,7 +136,7 @@
         <div class="section-title">О нас</div>
         <div class="text-content">
             Ассоциация фермерских хозяйств АгроСоюз работает над повышением эффективности малых форм хозяйствования на селе. Развитие малых форм хозяйствования в Новосибирской области является одним из ключевых направлений социально-экономического развития региона.
-        </div>
+            </div>
         <div class="text-content">
             Малые формы хозяйствования играют важную роль в сельском хозяйстве и экономике региона, предоставляя рабочие места, способствуя развитию местного производства и обеспечивая продовольственную безопасность.
         </div>
@@ -121,7 +146,7 @@
         <div class="section-title">Наша деятельность</div>
         <div class="text-content">
             Ассоциация «АгроСоюз» реализует ряд значимых проектов, направленных на поддержку малых форм хозяйствования в агропромышленной сфере. Эти проекты охватывают широкий спектр вопросов, начиная от улучшения доступа к финансированию и заканчивая развитием кооперации и внедрением цифровых технологий.
-</div>
+        </div>
     </div>
 
     <div class="section">
@@ -150,14 +175,18 @@
         </div>
     </div>
 
-    <a href="https://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/join-in-association/" class="join-button" target="_blank" rel="noopener noreferrer">
-    Вступить в Ассоциацию
-    </a>
+    <button onclick="openJoinPage()" class="join-button">
+        Вступить в Ассоциацию
+    </button>
 
     <script>
         let tg = window.Telegram.WebApp;
         tg.ready();
         tg.expand();
+
+        function openJoinPage() {
+            tg.openLink('https://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/join-in-association/');
+        }
     </script>
 </body>
 </html>
