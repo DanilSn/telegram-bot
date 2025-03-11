@@ -26,6 +26,16 @@
             line-height: 1.6;
             color: #444;
         }
+        .contact-info a {
+    color: #2ea32e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #247024;
+}
     </style>
 </head>
 <body>
@@ -62,11 +72,11 @@
 
     <!-- Секция "Наша команда" остается без изменений -->
     
-    <div class="contact-info">
-        <div class="section-title" style="text-align: center;">Контактная информация</div>
-        <p>Email: narodny.fermer@maiil.ru</p>
-        <p>Сайт: народныйфермер-нск.рф</p>
-    </div>
+   <div class="contact-info">
+    <div class="section-title">Контактная информация</div>
+    <p>Email: <a href="mailto:narodny.fermer@mail.ru">narodny.fermer@mail.ru</a></p>
+    <p>Сайт: <a href="https://народныйфермер-нск.рф" target="_blank">народныйфермер-нск.рф</a></p>
+</div>
 
     <button onclick="openJoinPage()" class="join-button">
         Вступить в Ассоциацию
