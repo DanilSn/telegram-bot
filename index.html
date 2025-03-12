@@ -15,39 +15,34 @@
         }
 
         .header {
-    position: relative;
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk-1.png');
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk-1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-@media (max-width: 768px) {
-    .header {
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk-1.png') !important;
-        background-size: cover !important;
-        background-position: top center !important;
-        background-repeat: no-repeat !important;
-        min-height: 200px;
-        padding: 60px 20px;
-    }
-    
-    .header::before {
-        display: none;
-    }
-}
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: blur(0px);
+            z-index: -1;
+        }
 
         .header h1 {
             margin: 0;
